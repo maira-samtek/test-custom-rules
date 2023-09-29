@@ -1,0 +1,26 @@
+name: Sync Security Hub findings and Jira issues
+on:
+  workflow_dispatch: # for testing and manual runs
+  schedule:
+    - cron: "25 1 * * *" # daily at 6:25 am EST
+permissions:
+  id-token: write
+jobs:
+  sync:
+    strategy:
+      max-parallel: 1
+      matrix:
+        environment: ["prod"] #required if env secrets contain same name but in different env
+      fail-fast: false
+    environment:
+      name: ${{ matrix.environment }}
+    name: Run sync
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-region: us-east-
+          role-to-assume: ${{ secrets.TEXT }}
