@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/": {
+      "name": "/",
+      "lambdaFunction": "testcustomrules168ff630",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

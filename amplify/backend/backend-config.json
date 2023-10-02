@@ -1,0 +1,78 @@
+{
+  "api": {
+    "CustomDeploymentRule": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "testcustomrules6beecc59"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "apieff7a381": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "testcustomrules168ff630"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "testcustomrules168ff630": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "testcustomrules6beecc59": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_testcustomrules168ff630_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "testcustomrules168ff630"
+        }
+      ]
+    },
+    "AMPLIFY_function_testcustomrules168ff630_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "testcustomrules168ff630"
+        }
+      ]
+    },
+    "AMPLIFY_function_testcustomrules6beecc59_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "testcustomrules6beecc59"
+        }
+      ]
+    },
+    "AMPLIFY_function_testcustomrules6beecc59_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "testcustomrules6beecc59"
+        }
+      ]
+    }
+  }
+}
