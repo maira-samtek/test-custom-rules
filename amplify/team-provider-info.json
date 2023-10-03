@@ -1,28 +1,25 @@
 {
-  "dev": {
+  "prod": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-testcustomrules-dev-194925-authRole",
-      "UnauthRoleArn": "arn:aws:iam::156322662943:role/amplify-testcustomrules-dev-194925-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::156322662943:role/amplify-testcustomrules-dev-194925-authRole",
+      "AuthRoleName": "amplify-testcustomrules-prod-182226-authRole",
+      "UnauthRoleArn": "arn:aws:iam::156322662943:role/amplify-testcustomrules-prod-182226-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::156322662943:role/amplify-testcustomrules-prod-182226-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-testcustomrules-dev-194925-deployment",
-      "UnauthRoleName": "amplify-testcustomrules-dev-194925-unauthRole",
-      "StackName": "amplify-testcustomrules-dev-194925",
-      "StackId": "arn:aws:cloudformation:us-east-1:156322662943:stack/amplify-testcustomrules-dev-194925/d43bce00-5f22-11ee-a470-0a688f98f0c5",
+      "DeploymentBucketName": "amplify-testcustomrules-prod-182226-deployment",
+      "UnauthRoleName": "amplify-testcustomrules-prod-182226-unauthRole",
+      "StackName": "amplify-testcustomrules-prod-182226",
+      "StackId": "arn:aws:cloudformation:us-east-1:156322662943:stack/amplify-testcustomrules-prod-182226/2a2dba70-6172-11ee-8130-0a13ce5667c1",
       "AmplifyAppId": "dt4gl6v6vt3a7"
     },
     "categories": {
       "function": {
-        "testcustomrules6beecc59": {
-          "deploymentBucketName": "amplify-testcustomrules-dev-194925-deployment",
-          "s3Key": "amplify-builds/testcustomrules6beecc59-41416934305330684c46-build.zip"
-        },
-        "testcustomrules3ce6c261": {},
-        "testcustomrules3c7504df": {},
-        "testcustomrules6d5ae168": {},
         "testcustomrules168ff630": {
-          "deploymentBucketName": "amplify-testcustomrules-dev-194925-deployment",
-          "s3Key": "amplify-builds/testcustomrules168ff630-55693765476f532f706c-build.zip"
+          "deploymentBucketName": "amplify-testcustomrules-prod-182226-deployment",
+          "s3Key": "amplify-builds/testcustomrules168ff630-66434b6b466666724777-build.zip"
+        },
+        "testcustomrules6beecc59": {
+          "deploymentBucketName": "amplify-testcustomrules-prod-182226-deployment",
+          "s3Key": "amplify-builds/testcustomrules6beecc59-41416934305330684c46-build.zip"
         }
       },
       "api": {

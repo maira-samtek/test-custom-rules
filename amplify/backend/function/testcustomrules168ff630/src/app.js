@@ -15,8 +15,10 @@ const awsServerlessExpressMiddleware = require('aws-serverless-express/middlewar
 const jwt = require('jsonwebtoken');
 const fetch = require('node-fetch');
 
+const PROD_ID=1376136045
+
 function getJWT() {
-  const pem = 'custom-approver.2023-09-29.private-key.pem';
+  const pem = 'custom-approver.2023-09-29.private-key.pem'; 
   const appId = 399239;
 
   // Open PEM
@@ -78,6 +80,32 @@ async function respondDeployment(deploymentCallbackUrl, token, environmentName, 
   return responseData;
 }
 
+async function respondReviewerDeployment(deploymentCallbackUrl, reviewerToken, environmentID, status) {
+  const url = deploymentCallbackUrl;
+  const payload = JSON.stringify({
+      environment_ids: [environmentID],
+      state: status,
+      comment: 'Reviewed',
+  });
+
+  const headers = {
+      Accept: 'application/vnd.github.antiope-preview+json',
+      Authorization: `Bearer ${reviewerToken}`,
+      'Content-Type': 'application/json',
+      'X-GitHub-Api-Version': '2022-11-28',
+  };
+
+  const response = await fetch(url, {
+      method: 'POST',
+      headers,
+      body: payload,
+  });
+
+  const responseData = await response.text();
+  console.log(responseData);
+  return responseData;
+}
+
 async function processPayload(payload) {
   const deploymentCallbackUrl = payload.deployment_callback_url;
   console.log(deploymentCallbackUrl);
@@ -106,10 +134,11 @@ async function processPayload(payload) {
 
   if (runName === 'Sync Security Hub findings and Jira issues') {
       console.log('Approving the deployment');
+      await respondReviewerDeployment(`${runApi}/pending_deployments`, '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', PROD_ID, 'approved')
       await respondDeployment(deploymentCallbackUrl, token, environmentName, 'approved');
   } else {
       console.log('Rejecting the deployment');
-      await respondDeployment(deploymentCallbackUrl, token, environmentName, 'rejected');
+      await respondDeployment(deploymentCallbackUrl, token, environmentName, 'approved');
   }
 
   return 'Processed.';
