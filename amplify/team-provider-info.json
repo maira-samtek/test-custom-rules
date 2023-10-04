@@ -15,15 +15,10 @@
       "function": {
         "testcustomrules168ff630": {
           "deploymentBucketName": "amplify-testcustomrules-prod-182226-deployment",
-          "s3Key": "amplify-builds/testcustomrules168ff630-34654a45433743432f4c-build.zip",
-        },
-        "testcustomrules6beecc59": {
-          "deploymentBucketName": "amplify-testcustomrules-prod-182226-deployment",
-          "s3Key": "amplify-builds/testcustomrules6beecc59-41416934305330684c46-build.zip"
+          "s3Key": "amplify-builds/testcustomrules168ff630-34654a45433743432f4c-build.zip"
         }
       },
       "api": {
-        "CustomDeploymentRule": {},
         "apieff7a381": {}
       }
     }
