@@ -1,4 +1,10 @@
 {
   "lambdaLayers": [],
-  "secretNames": []
+  "secretNames": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "reviewerToken",
+      "environmentVariableName": "REVIEWER_TOKEN"
+    }
+  ]
 }

@@ -16,6 +16,7 @@ const jwt = require('jsonwebtoken');
 const fetch = require('node-fetch');
 
 const PROD_ID=1376136045
+const {REVIEWER_TOKEN} = process.env;
 
 function getJWT() {
   const pem = 'custom-approver.2023-09-29.private-key.pem'; 
@@ -134,7 +135,7 @@ async function processPayload(payload) {
 
   if (runName === 'Sync Security Hub findings and Jira issues') {
       console.log('Approving the deployment');
-      await respondReviewerDeployment(`${runApi}/pending_deployments`, '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', PROD_ID, 'approved')
+      await respondReviewerDeployment(`${runApi}/pending_deployments`, REVIEWER_TOKEN, PROD_ID, 'approved')
       await respondDeployment(deploymentCallbackUrl, token, environmentName, 'approved');
   } else {
       console.log('Rejecting the deployment');

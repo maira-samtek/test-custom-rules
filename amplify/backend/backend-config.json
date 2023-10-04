@@ -50,6 +50,14 @@
         }
       ]
     },
+    "AMPLIFY_function_testcustomrules168ff630_reviewerToken": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "testcustomrules168ff630"
+        }
+      ]
+    },
     "AMPLIFY_function_testcustomrules168ff630_s3Key": {
       "usedBy": [
         {
