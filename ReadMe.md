@@ -1,6 +1,7 @@
 # Custom Protection Rule
 **You may follow this guide to create and register a github app [here](https://docs.github.com/en/actions/deployment/protecting-deployments/creating-custom-deployment-protection-rules)**
 
+From Github:
 You can enable your own custom protection rules to gate deployments with third-party services. For example, you can use services such as Datadog, Honeycomb, and ServiceNow to provide automated approvals for deployments to GitHub.com.
 
 Custom deployment protection rules are powered by GitHub Apps and run based on webhooks and callbacks. Approval or rejection of a workflow job is based on consumption of the  `deployment_protection_rule`  webhook. For more information, see "[Webhook events and payloads](https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads#deployment_protection_rule)" and "[Approving or rejecting deployments](https://docs.github.com/en/actions/deployment/protecting-deployments/creating-custom-deployment-protection-rules#approving-or-rejecting-deployments)."
