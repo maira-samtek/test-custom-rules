@@ -7,10 +7,11 @@ You can enable your own custom protection rules to gate deployments with third-p
 Custom deployment protection rules are powered by GitHub Apps and run based on webhooks and callbacks. Approval or rejection of a workflow job is based on consumption of the  `deployment_protection_rule`  webhook. For more information, see "[Webhook events and payloads](https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads#deployment_protection_rule)" and "[Approving or rejecting deployments](https://docs.github.com/en/actions/deployment/protecting-deployments/creating-custom-deployment-protection-rules#approving-or-rejecting-deployments)."
 
 Once you have created a custom deployment protection rule and installed it on your repository, the custom deployment protection rule will automatically be available for all environments in the repository.
-
+***Note: Kindly create an app with organizational scope instead of a personal account scope***
 # Current Implementation
 Github App is checked with the environment's protection rules and Github sends a POST request to webhook of the configured app with the information of the action run. Once the webhook is hit by the github app with the metadata it processes the incoming info and responds to the information accordingly. 
 In this implementation, AWS API Gateway and  Lambda function to play the webhook part. You may look at the following [architecture diagram](https://drive.google.com/file/d/1KtjpuduLridV42X4L5-JAbYWLkXXI-dt/view?usp=sharing) to understand it
+![Architecture Diagram](https://drive.google.com/uc?id=18eW9IwomMjatsf-bpjnqCGTFJbwVOaTZ&export=download)
 ## Steps to Deploy
 To create Lambda + API Gateway through code and deploy, you need to follow these steps
 ### Amplify setup (Optional)
