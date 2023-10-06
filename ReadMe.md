@@ -16,6 +16,7 @@ To create Lambda + API Gateway through code and deploy, you need to follow these
 ### Amplify setup (Optional)
 ***Note: You can create the resources manually too. Amplify is just to make it a few commands away***
 
+
 Install amplify cli from [here](https://docs.amplify.aws/cli/start/install/). Then you need to configure Amplify Profile to init and env and use that for deploying the local lambda and api to eRegs' AWS account
 You may follow [this](https://truthfulwrites.blogspot.com/2022/07/set-up-aws-amplify-with-js-websites.html) guide for setting up amplify cli
 
