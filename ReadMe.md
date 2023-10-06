@@ -13,11 +13,11 @@ Github App is checked with the environment's protection rules and Github sends a
 In this implementation, AWS API Gateway and  Lambda function to play the webhook part. You may look at the following [architecture diagram](https://drive.google.com/file/d/1KtjpuduLridV42X4L5-JAbYWLkXXI-dt/view?usp=sharing) to understand it
 ## Steps to Deploy
 To create Lambda + API Gateway through code and deploy, you need to follow these steps
-### Amplify setup
+### Amplify setup (Optional)
+***Note: You can create the resources manually too. Amplify is just to make it a few commands away***
 Install amplify cli from [here](https://docs.amplify.aws/cli/start/install/). Then you need to configure Amplify Profile to init and env and use that for deploying the local lambda and api to eRegs' AWS account
 You may follow [this](https://truthfulwrites.blogspot.com/2022/07/set-up-aws-amplify-with-js-websites.html) guide for setting up amplify cli
 
-***Note: You can create the resources manually too. Amplify is just to make it a few commands away***
 ### Deploy Command
 After doing any change to the lambda code, you may run the following command to deploy the changes
 
