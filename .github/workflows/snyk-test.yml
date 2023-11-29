@@ -13,6 +13,8 @@ jobs:
   snyk_run:
     name: Snyk Run (for PR)
     runs-on: ubuntu-latest
+     matrix:
+        environment: ["prod"]
     if: github.event_name == 'pull_request'
     
     steps:
