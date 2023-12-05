@@ -21,5 +21,5 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-region: us-east-
+          aws-region: us-east-1
           role-to-assume: ${{ secrets.TEST }}
